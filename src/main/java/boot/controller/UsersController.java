@@ -49,7 +49,7 @@ public class UsersController {
 
     @PatchMapping("/update")
     public String updateUser(@ModelAttribute("user") User user) {
-        userService.update(user);
+        userService.save(user);
         return "redirect:/users/list";
     }
     @GetMapping("/delete")
